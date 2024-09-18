@@ -6,9 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class dayOne {
-    public static void answerPuzzle(){
+    public static void answerPuzzle() {
 
         List<String> f = new ArrayList<>();
 
@@ -69,3 +68,4 @@ public class dayOne {
         return input;
     }
 }
+

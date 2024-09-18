@@ -3,7 +3,8 @@ package se.nymia;
 public class Main {
     public static void main(String[] args) {
 
-        dayOne.answerPuzzle();
+        //dayOne.answerPuzzle();
+        dayOneRefactor.answerPuzzle();
 
     }
 }
