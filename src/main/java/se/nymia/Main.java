@@ -6,11 +6,10 @@ public class Main {
         /*
          dayOne.answerPuzzle();
          dayOneRefactor.answerPuzzle();
+         dayOneRefactorTwo.answerPuzzle();
         */
 
-        dayOneRefactorTwo.answerPuzzle();
-
-        //dayTwo.answerPuzzle();
+        dayTwo.answerPuzzle();
 
     }
 }
