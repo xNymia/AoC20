@@ -8,7 +8,9 @@ public class Main {
          dayOneRefactor.answerPuzzle();
         */
 
-        dayTwo.answerPuzzle();
+        dayOneRefactorTwo.answerPuzzle();
+
+        //dayTwo.answerPuzzle();
 
     }
 }
