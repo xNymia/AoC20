@@ -2,7 +2,6 @@ package se.nymia;
 
 import se.nymia.utils.utilities;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
