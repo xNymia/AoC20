@@ -47,9 +47,8 @@ public class DayTwo {
             passwordManager pm = new passwordManager(s);
             int count = (int) pm.pass.chars().filter(c -> c == pm.value).count();
 
-            if (count >= pm.min && count <= pm.max) {
-                valid++;
-            }
+            if (count >= pm.min && count <= pm.max) valid++;
+
 
             char charAtMin = pm.pass.charAt(pm.min-1);
             char charAtMax = pm.pass.charAt(pm.max-1);
