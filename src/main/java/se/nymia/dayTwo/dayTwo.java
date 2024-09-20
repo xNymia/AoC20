@@ -53,11 +53,11 @@ public class dayTwo {
             char value;
             String pass;
 
-        //private passwordManager(int min, int max, char value, String pass){}
         public passwordManager(String input){
             List<String> in = Arrays.asList(input.split(" "));
-            this.value = in.get(1).charAt(0);
             String[] temp = in.get(0).split("-");
+
+            this.value = in.get(1).charAt(0);
             this.min = Integer.parseInt(temp[0]);
             this.max = Integer.parseInt(temp[1]);
             this.pass = in.get(2).trim();
