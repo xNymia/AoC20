@@ -27,12 +27,26 @@ public class dayTwo {
             int max = Integer.parseInt(temp[1]);
             String pass = str.get(2).trim();
 
-            long count = pass.chars().filter(c -> c == value).count();
+            int count = (int) pass.chars().filter(c -> c == value).count();
 
             if (count >= min && count <= max) {
                 valid++;
             }
         }
         System.out.println(valid);
+
+        for (String s : input) {
+            passwordManager pm = new PasswordManager();
+        }
+
+
+    }
+    private class passwordManager {}
+
+    private static void passwordManager(){
+        int min;
+        int max;
+        char value;
+        String pass;
     }
 }
