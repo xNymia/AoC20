@@ -1,5 +1,7 @@
 package se.nymia;
 
+import se.nymia.dayTwo.dayTwo;
+
 public class Main {
     public static void main(String[] args) {
 

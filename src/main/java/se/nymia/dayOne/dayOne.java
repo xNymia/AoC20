@@ -1,4 +1,4 @@
-package se.nymia;
+package se.nymia.dayOne;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
