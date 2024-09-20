@@ -38,6 +38,11 @@ public class dayTwo {
         for (String s : input) {
             passwordManager pm = new passwordManager(s);
             System.out.println(pm);
+            int count = (int) pm.pass.chars().filter(c -> c == pm.value).count();
+
+            if (count >= pm.min && count <= pm.max) {
+                valid++;
+            }
         }
 
 
