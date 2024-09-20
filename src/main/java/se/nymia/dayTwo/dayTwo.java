@@ -9,7 +9,7 @@ public class dayTwo {
     public static void answerPuzzle() {
 
         List<String> input;
-        int valid = 0;
+
 
         try {
             input = utilities.getInputFile(String.format("src/main/resources/day%sInput.txt", "Two"));
@@ -18,6 +18,7 @@ public class dayTwo {
             return;
         }
 
+        // --------- VERSION 1 ----------
 //        for (String s : input) {
 //            List<String> str = Arrays.asList(s.split(" "));
 //
@@ -35,6 +36,8 @@ public class dayTwo {
 //        }
 //        System.out.println(valid);
 
+        int valid = 0;
+        int valid2 = 0;
         for (String s : input) {
             passwordManager pm = new passwordManager(s);
             System.out.println(pm);
@@ -43,8 +46,14 @@ public class dayTwo {
             if (count >= pm.min && count <= pm.max) {
                 valid++;
             }
-        }
+            if ((pm.pass.charAt(pm.min-1) == pm.value || pm.pass.charAt(pm.max-1) == pm.value) &&
+                    !(pm.pass.charAt(pm.min-1) == pm.value && pm.pass.charAt(pm.max-1) == pm.value)) {
+                valid2++;
 
+            }
+        }
+        System.out.println(valid);
+        System.out.println(valid2);
 
     }
     private static class passwordManager {
