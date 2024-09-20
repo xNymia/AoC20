@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-public class dayTwo {
+public class DayTwo {
     public static void answerPuzzle() {
 
         List<String> input;

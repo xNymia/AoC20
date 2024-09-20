@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class dayOne {
+public class DayOne {
     public static void answerPuzzle() {
 
         List<String> f = new ArrayList<>();

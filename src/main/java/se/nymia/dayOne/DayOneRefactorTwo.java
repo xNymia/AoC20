@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class dayOneRefactor {
+public class DayOneRefactorTwo {
     public static void answerPuzzle() {
         List<String> input;
 
@@ -17,11 +17,16 @@ public class dayOneRefactor {
             return;
         }
 
-        int pairProduct = getPair(input);
+        List<Integer> inputlist = new ArrayList<>();
+        for (String line : input) {
+            inputlist.add(Integer.parseInt(line));
+        }
+
+        int pairProduct = getPair(inputlist);
         if (pairProduct != -1) {
             System.out.println(pairProduct);
         }
-        int tripleProduct = getTriple(input);
+        int tripleProduct = getTriple(inputlist);
         if (tripleProduct != -1) {
             System.out.println(tripleProduct);
         }
@@ -38,29 +43,22 @@ public class dayOneRefactor {
         return input;
     }
 
-    private static int getPair(List<String> input) {
-        for (String a : input) {
-            int valOne = Integer.parseInt(a);
-            for (String b : input) {
-                int valTwo = Integer.parseInt(b);
-                if (valOne + valTwo == 2020) {
-                    return valOne * valTwo;
-                }
-            }
+    private static int getPair(List<Integer> input) {
+        for (Integer valOne : input) {
+            int searchVal = 2020-valOne;
+            if (input.contains(searchVal)) return valOne * searchVal;
         }
         return -1;
     }
 
-    private static int getTriple(List<String> input) {
-        for (String a : input) {
-            int valOne = Integer.parseInt(a);
-            for (String b : input) {
-                int valTwo = Integer.parseInt(b);
-                for (String c : input) {
-                    int valThree = Integer.parseInt(c);
-                    if (valOne + valTwo + valThree == 2020) {
-                        return valOne * valTwo * valThree;
-                    }
+    private static int getTriple(List<Integer> input) {
+        for (Integer valOne : input) {
+            int searchVal = 2020 - valOne;
+            for (Integer valTwo : input) {
+                if (valTwo >= searchVal) continue;
+                int newSearchVal = searchVal - valTwo;
+                if (input.contains(newSearchVal)) {
+                    return(valOne*valTwo*newSearchVal);
                 }
             }
         }
