@@ -52,6 +52,11 @@ public class dayOne {
         }
     }
 
+
+    /**
+     * @return List<String>
+     * @throws IOException
+     */
     private static List<String> getFile() throws IOException {
 
         //TODO: Move to standalone class / file.

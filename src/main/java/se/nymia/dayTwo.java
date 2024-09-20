@@ -21,12 +21,13 @@ public class dayTwo {
         for (String s : input) {
             List<String> str = Arrays.asList(s.split(" "));
 
-            String value = str.get(1).split(":")[0];
-            int min = Integer.parseInt(str.get(0).split("-")[0]);
-            int max = Integer.parseInt(str.get(0).split("-")[1]);
+            char value = str.get(1).charAt(0);
+            String[] temp = str.get(0).split(":");
+            int min = Integer.parseInt(temp[0]);
+            int max = Integer.parseInt(temp[1]);
             String pass = str.get(2).trim();
 
-            int count = (int) pass.chars().filter(c -> c == value.charAt(0)).count();
+            long count = pass.chars().filter(c -> c == value).count();
 
             if (count >= min && count <= max) {
                 valid++;
